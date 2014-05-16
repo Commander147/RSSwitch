@@ -22,6 +22,7 @@
 		7CA520911925D20E0006982C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CA520701925D20E0006982C /* UIKit.framework */; };
 		7CA520991925D20E0006982C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7CA520971925D20E0006982C /* InfoPlist.strings */; };
 		7CA5209B1925D20E0006982C /* RSSwitchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA5209A1925D20E0006982C /* RSSwitchTests.m */; };
+		7CA520A61925D2280006982C /* RSSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA520A51925D2280006982C /* RSSwitch.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		7CA520961925D20E0006982C /* RSSwitchTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RSSwitchTests-Info.plist"; sourceTree = "<group>"; };
 		7CA520981925D20E0006982C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7CA5209A1925D20E0006982C /* RSSwitchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSSwitchTests.m; sourceTree = "<group>"; };
+		7CA520A41925D2280006982C /* RSSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSwitch.h; sourceTree = "<group>"; };
+		7CA520A51925D2280006982C /* RSSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSwitch.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,12 +117,10 @@
 		7CA520721925D20E0006982C /* RSSwitch */ = {
 			isa = PBXGroup;
 			children = (
-				7CA5207B1925D20E0006982C /* RSAppDelegate.h */,
-				7CA5207C1925D20E0006982C /* RSAppDelegate.m */,
-				7CA5207E1925D20E0006982C /* Main_iPhone.storyboard */,
-				7CA520811925D20E0006982C /* Main_iPad.storyboard */,
-				7CA520841925D20E0006982C /* RSViewController.h */,
-				7CA520851925D20E0006982C /* RSViewController.m */,
+				7CA520AA1925D38F0006982C /* Storyboards */,
+				7CA520A91925D3820006982C /* Controllers */,
+				7CA520A81925D3710006982C /* AppDelegate */,
+				7CA520A71925D3640006982C /* Classes */,
 				7CA520871925D20E0006982C /* Images.xcassets */,
 				7CA520731925D20E0006982C /* Supporting Files */,
 			);
@@ -153,6 +154,42 @@
 				7CA520971925D20E0006982C /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7CA520A71925D3640006982C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7CA520A41925D2280006982C /* RSSwitch.h */,
+				7CA520A51925D2280006982C /* RSSwitch.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		7CA520A81925D3710006982C /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				7CA5207B1925D20E0006982C /* RSAppDelegate.h */,
+				7CA5207C1925D20E0006982C /* RSAppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		7CA520A91925D3820006982C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7CA520841925D20E0006982C /* RSViewController.h */,
+				7CA520851925D20E0006982C /* RSViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		7CA520AA1925D38F0006982C /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				7CA5207E1925D20E0006982C /* Main_iPhone.storyboard */,
+				7CA520811925D20E0006982C /* Main_iPad.storyboard */,
+			);
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,6 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CA520A61925D2280006982C /* RSSwitch.m in Sources */,
 				7CA520791925D20E0006982C /* main.m in Sources */,
 				7CA5207D1925D20E0006982C /* RSAppDelegate.m in Sources */,
 				7CA520861925D20E0006982C /* RSViewController.m in Sources */,

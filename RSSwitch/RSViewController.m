@@ -7,23 +7,39 @@
 //
 
 #import "RSViewController.h"
-
-@interface RSViewController ()
-
-@end
+#import "RSSwitch.h"
 
 @implementation RSViewController
 
-- (void)viewDidLoad
+-(void)viewDidAppear:(BOOL)animated
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    int yoffset = 20;
+    int spacing = 5;
+    
+    for(int i = 1;i<11;i++){
+        int scale = i*10;
+        int width = scale+10;
+        int height = (scale+10)*.60;
+        
+        CGRect frame = {
+            ((self.view.frame.size.width/2) - width/2)/2,
+            yoffset,
+            width,
+            height
+        };
+        
+        RSSwitch *toggle = [[RSSwitch alloc] initWithFrame:frame];
+        toggle.tag = i;
+        toggle.delegate = self;
+        yoffset += height + spacing;
+        toggle.onTint = [UIColor orangeColor];
+        [self.view addSubview:toggle];
+    }
 }
 
-- (void)didReceiveMemoryWarning
+-(void)RSSwitchDidChangeState:(RSSwitch *)toggle
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    NSLog(@"Switch %d: state:%d",toggle.tag, toggle.isOn);
 }
 
 @end
